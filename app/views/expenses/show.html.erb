@@ -1,0 +1,6 @@
+<h1><%= @expense.title %></h1>
+<p>Amount: <%= @expense.amount %></p>
+<p>Payment Type: <%= @expense.payment_type %></p>
+
+<%= link_to "Back to Expenses", user_expenses_path(current_user), class: "btn btn-secondary" %>
+<%= link_to "Delete", user_expense_path(current_user, @expense), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>

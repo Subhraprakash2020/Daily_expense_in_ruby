@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container">
+  <div class="card3">
+  <h2>Daily Expense</h2>
+  <div class = "head_content">
+  <h3> Total :  <%= @total_expense_amount %></h3>
+  <%= link_to "Add Expense", new_user_expense_path(current_user), class: "btn btn-primary" %>
+  </div>
+ <div class="list_item">
+  <ul>
+    <% @expense.each do |expense| %>
+      <li class="list">
+        <span class="expense-title">
+          <%= link_to expense.title, edit_user_expense_path(current_user, expense) %>
+        </span>
+        <span class="expense-amount">
+          <%= link_to expense.amount, edit_user_expense_path(current_user, expense) %>
+        </span>
+        <span class="expense-delete">
+          <%= link_to [expense.user, expense], data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+</div>
+ 
+ </div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+ <div class="card register">
+ <h2>Register</h2>
+<%= form_with model: @user do |form| %>
+  <div>
+    <%= form.label :username %><br>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :password %><br>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class = "fsub">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>
+</div>

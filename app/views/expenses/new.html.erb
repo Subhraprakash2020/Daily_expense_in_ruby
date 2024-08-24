@@ -1,0 +1,26 @@
+<div class="container">
+ <div class="card register">
+ <h2> Add Expense </h2>
+<%= form_with model: @expense, url: user_expenses_path(current_user), local: true do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+<div>
+  <%= form.label :payment_type %>
+  <%= form.select :payment_type, options_for_select([['PhonePe', 'phonepe'], ['Google Pay', 'googlepay'], ['Paytm', 'paytm'], ['Cash', 'cash']]), prompt: "Select Payment Type" %>
+</div>
+
+
+  <div class = "fsub">
+    <%= form.submit "Save Expense" %>
+  </div>
+<% end %>
+</div>
+</div>
