@@ -163,8 +163,8 @@ select{
 
 /* Add these styles to your CSS file */
 .list_item {
-  padding: 10px;
-  background-color: #f9f9f9;
+  padding: 5px;
+  background-color: rgb(241, 241, 179);
   border-radius: 8px;
   width: 100%;
   max-width: 600px;
@@ -210,7 +210,7 @@ ul {
 .expense-title a,
 .expense-amount a {
   text-decoration: none;
-  color: #007bff;
+  color: #ffcc00;
   font-weight: bold;
 }
 
